@@ -46,3 +46,4 @@ obj/project.nuget.cache
 obj/text-adventure.csproj.nuget.g.props
 obj/text-adventure.csproj.nuget.g.targets
 text-adventure.csproj
+.vs/text-adventure/DesignTimeBuild/.dtbcache.v2
