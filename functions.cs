@@ -18,5 +18,17 @@ namespace Adventure {
             ResetColor();
             ReadKey();
         }
+        static void Command(string message)
+        {
+            ForegroundColor = ConsoleColor.White;
+            WriteLine(message);
+            ResetColor();
+        }
+        static void Text(string message)
+        {
+            ForegroundColor = ConsoleColor.Red;
+            WriteLine(message);
+            ResetColor();
+        }
     }
 }
