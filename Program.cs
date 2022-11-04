@@ -87,7 +87,7 @@ namespace MainGame
             {
                 Functions.Text("You pour the viscous fluid down your throat. Curiously, it has no smell, but its taste burns with the fury of a thousand suns. You get it down though, and grin broadly at your new friends.");
                 ReadKey();
-                Functions.Npc("Shady Man","Haha! Well done! Here, take this dagger. And keep your voice down. The crows are everywhere...");
+                Functions.Npc("Shady Man", "Haha! Well done! Here, take this dagger. And keep your voice down. The crows are everywhere...");
                 Functions.Command("You got a dagger!");
                 Trait.HasDagger = true;
                 Functions.Text("The shady mans face drops at his own mention of crows. You add the dagger to inventory and wish the men well before returning to the bar floor");
@@ -176,7 +176,7 @@ namespace MainGame
         {
             Clear();
             Functions.Text("You awaken.\nYou try to open your eyes but searing light forces them shut.\n \n..\n \nThe ringing in your ears subsides a little, and you can make out several voices slowly coming into focus.");
-            Functions.Npc("Unknown","... mmmph mumble feffffrrghh mumble mmph...");
+            Functions.Npc("Unknown", "... mmmph mumble feffffrrghh mumble mmph...");
             Functions.Npc("Unknown", "Hey, you. You're finally awake.");
             Functions.Text("You groan.");
             Functions.Command("You have a hangover! (-1 to Con saves - cooldown 300s)");
@@ -190,14 +190,14 @@ namespace MainGame
             {
                 Functions.Text("As you approach a group of five particularly sus looking individuals, one of them looks in your direction and smiles warmly...");
                 // if hungover then you throw up and they kick you out. otherwise they gift a dagger. you can lose hungover trait by doing something else before talking to these guys.
-                Functions.Npc("Shady Man","Well now, if it isn't " + NomDeGuerre + ". What brings you here," + CharacterName + "? Never mind. Sit, and drink nectar with us.");
+                Functions.Npc("Shady Man", "Well now, if it isn't " + NomDeGuerre + ". What brings you here," + CharacterName + "? Never mind. Sit, and drink nectar with us.");
                 ReadKey();
                 Shot();
             }
             if (Trait.Aficionado == false)
             {
                 Functions.Text("As you approach a group of five particularly sus looking individuals, one of them looks in your direction and grimaces. He speaks...");
-                Functions.Npc("Shady man","Keep walking, adventurer. No geeks, freaks, or neeks at this table.");
+                Functions.Npc("Shady man", "Keep walking, adventurer. No geeks, freaks, or neeks at this table.");
                 Functions.Text("He's got you bang to rights there, nerd. You return to the bar floor and wonder how you could win the favour of these dubious fellows.");
                 ReadKey();
                 Drink();

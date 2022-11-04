@@ -57,3 +57,13 @@ obj/Release/netcoreapp3.1/text-adventure.csproj.AssemblyReference.cache
 obj/Release/netcoreapp3.1/text-adventure.csproj.CoreCompileInputs.cache
 obj/Release/netcoreapp3.1/text-adventure.genruntimeconfig.cache
 obj/Release/netcoreapp3.1/text-adventure.csproj.FileListAbsolute.txt
+App.config
+obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+obj/Debug/Basterd-Quest.csproj.AssemblyReference.cache
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+obj/Release/Basterd-Quest.csproj.CoreCompileInputs.cache
+obj/Release/Basterd-Quest.csproj.FileListAbsolute.txt
+obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
+Properties/AssemblyInfo.cs
+bin/Release/Basterd-Quest.exe.config
