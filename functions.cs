@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace Adventure {
 	public class Functions {
-        static void Narrator (string text)
+        static void Narrator(string text)
         {
             ForegroundColor = ConsoleColor.Yellow;
             BackgroundColor = ConsoleColor.Blue;

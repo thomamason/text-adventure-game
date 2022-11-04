@@ -46,3 +46,9 @@ obj/project.nuget.cache
 obj/text-adventure.csproj.nuget.g.props
 obj/text-adventure.csproj.nuget.g.targets
 .vs/text-adventure/DesignTimeBuild/.dtbcache.v2
+*.sqlite
+.vs/text-adventure-game/v16/.suo
+obj/Release/netcoreapp3.1/text-adventure.AssemblyInfo.cs
+obj/Release/netcoreapp3.1/text-adventure.AssemblyInfoInputs.cache
+obj/Release/netcoreapp3.1/text-adventure.GeneratedMSBuildEditorConfig.editorconfig
+obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs

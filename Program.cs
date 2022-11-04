@@ -26,12 +26,12 @@ namespace Adventure
       ░                                              ░                                                    
 ";
             Functions.Text("Welcome, nerds, to T.G Featherstone's...............");
-            Command("Press any key");
+            Functions.Command("Press any key");
             ReadKey();
             Beep();
             Clear();
             Functions.Text(TitleText);
-            Command("\nPress any key");
+            Functions.Command("\nPress any key");
             ReadKey();
             Beep();
             Clear();
@@ -39,11 +39,11 @@ namespace Adventure
         }
         static void NameCharacter()
         {
-            Narrator("What is your name, traveller?");
-            Command("Please enter your name below.");
+            Functions.Narrator("What is your name, traveller?");
+            Functions.Command("Please enter your name below.");
             CharacterName = ReadLine();
             Functions.Narrator("I see... a mighty appellation! And by what moniker do the denizens of this realm know you as, " + CharacterName + "?");
-            Command("Please enter your Nom de Guerre");
+            Functions.Command("Please enter your Nom de Guerre");
             NomDeGuerre = ReadLine();
             Functions.Narrator("Ooooh noooo! " + CharacterName + " " + NomDeGuerre + "!");
             Functions.Narrator("...");
@@ -67,7 +67,7 @@ namespace Adventure
             if (Trait.Hungover == true)
             {
                 Trait.Hungover = false;
-                Command("Your hangover fades away!");
+                Functions.Command("Your hangover fades away!");
             }
             else
             {
@@ -88,7 +88,7 @@ namespace Adventure
                 Functions.Text("You pour the viscous fluid down your throat. Curiously, it has no smell, but its taste burns with the fury of a thousand suns. You get it down though, and grin broadly at your new friends.");
                 ReadKey();
                 Functions.Npc("Shady Man","Haha! Well done! Here, take this dagger. And keep your voice down. The crows are everywhere...");
-                Command("You got a dagger!");
+                Functions.Command("You got a dagger!");
                 Trait.HasDagger = true;
                 Functions.Text("The shady mans face drops at his own mention of crows. You add the dagger to inventory and wish the men well before returning to the bar floor");
                 ReadKey();
@@ -100,7 +100,7 @@ namespace Adventure
             string input = "";
             Clear();
             Functions.Text("You are stood at the bar in the bloody stool. What will you have to drink?\nA) Tia Maria w/ Lucozade.\nB) Amyl Nitrates. From the top-shelf, of course.\nC) Magnum Tonic, straight-up.");
-            Command("Please type A, B or C");
+            Functions.Command("Please type A, B or C");
             input = ReadLine();
             input = input.ToUpper();
             if (input == "A")
@@ -112,7 +112,7 @@ namespace Adventure
             if (input == "B")
             {
                 Functions.Text("\"Fuck it.\" you think. You drink the shot. And black out.");
-                Command("You got the \'British Bulldog\' Trait (+1 to Con Saves Vs. Solvents)");
+                Functions.Functions.Command("You got the \'British Bulldog\' Trait (+1 to Con Saves Vs. Solvents)");
                 Trait.Aficionado = true;
                 ReadKey();
                 DrankPoppers();
@@ -133,7 +133,7 @@ namespace Adventure
             Functions.Text("The bar is being propped up by a half dozen customers and manned by a woman with horns protruding from her head. Taking stock of the calibre of drinkers in this establishment, you notice \namongst them a flamboyant bard, a pidgeon mage with a mischievous glint it their eye, a gnome whose eyes glow from a life in the underdark, two men - identical in appearance - arguing with one another. Caught in the middle is a half-elf clad in dark leather armour.");
             Functions.Text("");
             Functions.Text("Will you:\nA) Dance and make merry with the revellers.\nB) Introduce yourself to the fellows lurking in the corners. Maybe you can get in on their game?\nC)Approach the bar.");
-            Command("Please type A, B, or C.");
+            Functions.Command("Please type A, B, or C.");
             input = ReadLine();
             input = input.ToUpper();
             if (input == "A")
@@ -142,22 +142,22 @@ namespace Adventure
                 Functions.Text("");
                 CureHangover();
                 Functions.Text("Dancing is great fun! Want to keep going?");
-                Command("Continue dancing? Y/N?");
+                Functions.Command("Continue dancing? Y/N?");
                 input = ReadLine();
                 input = input.ToUpper();
                 if (input == "Y")
                 {
                     Functions.Text("You are the dancing queen.");
-                    Command("You have earned the 'Dancing Queen' trait! (+1 to charisma while in nightclubs and on dancefloors");
+                    Functions.Command("You have earned the 'Dancing Queen' trait! (+1 to charisma while in nightclubs and on dancefloors");
                     Trait.DancingQueen = true;
-                    Command("Press any key");
+                    Functions.Command("Press any key");
                     ReadKey(true);
                     BarFloor();
                 }
                 else
                 {
                     Functions.Text("You leave the dance floor.");
-                    Command("Press any key");
+                    Functions.Command("Press any key");
                     ReadKey(true);
                     BarFloor();
                 }
@@ -179,7 +179,7 @@ namespace Adventure
             Functions.Npc("Unknown","... mmmph mumble feffffrrghh mumble mmph...");
             Functions.Npc("Unknown", "Hey, you. You're finally awake.");
             Functions.Text("You groan.");
-            Command("You have a hangover! (-1 to Con saves - cooldown 300s)");
+            Functions.Command("You have a hangover! (-1 to Con saves - cooldown 300s)");
             Trait.Hungover = true;
             ReadKey();
             BarFloor();
@@ -206,7 +206,7 @@ namespace Adventure
         static void TheBar()
         {
             Functions.Text("You walk up to a spot at the bar in between the pidgeon mage and the bard.\n Will you A) Get the bartenders attention and order a drink?\nB) Introduce yourself to the mage and the bard?\nC) Just loiter about.");
-            Command("Please select A, B, or C");
+            Functions.Command("Please select A, B, or C");
             string input = "";
             input = ReadLine();
             input = input.ToUpper();
@@ -217,12 +217,12 @@ namespace Adventure
             else if (input == "B")
             {
                 Functions.Text("OK. What topic of conversation will you break the ice with?");
-                Command("Please type the topic of conversation below.");
+                Functions.Command("Please type the topic of conversation below.");
                 input = ReadLine();
                 Functions.Text("You introduce yourself to the bard and the mage, and ask what their views on " + input + " is?");
                 ReadKey();
                 Functions.Text("They stare at you incredulously. Several seconds pass before you back away from the interaction. As you turn away, you hear one say \"what a horrible person\". ");
-                Command("Press any key");
+                Functions.Command("Press any key");
                 ReadKey();
                 EndGame();
             }
@@ -245,7 +245,7 @@ namespace Adventure
                 "\n" +
                 "A) Speak with the figure.\n" +
                 "B) Attempt to leave.");
-            Command("Please type A or B followed by Enter.");
+            Functions.Command("Please type A or B followed by Enter.");
             string input = "";
             input = ReadLine();
             input = input.ToUpper();
@@ -256,7 +256,7 @@ namespace Adventure
                     "regurgitate an egg. It is much smaller than a chicken or duck egg and warm in your hand.\n" +
                     "\n");
                 Trait.HasEgg = true;
-                Command("Press any key");
+                Functions.Command("Press any key");
                 ReadKey(true);
                 EndGame2();
             }
@@ -273,14 +273,14 @@ namespace Adventure
             Functions.Text("You recoil and turn in horror, but the figure is already there to meet you. You see the white of an eye\n" +
                 "peering out from under soiled hair and cloth. Slowly, but with feline grace, the figure raises a hand to\n" +
                 "their eye");
-            Command("Press any key");
+            Functions.Command("Press any key");
             ReadKey(true);
             if (Trait.HasDagger == true)
             {
                 Functions.Text("You draw your dagger and brandish it towards to the figure. You can scarcely believe your eyes to\n" +
                     "see the dagger is now a fistful of worms, wriggling and squirming. Panicked, you drop the worms\n" +
                     "to the floor.");
-                Command("Press any key");
+                Functions.Command("Press any key");
                 ReadKey(true);
             }
             Functions.Text("The figure begins to work their fingers into their eye socket and with a single, swift motion, they\n" +
@@ -311,7 +311,7 @@ namespace Adventure
       ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
                                                      ░                   
 ");
-            Command("Thanks for playing. Type A to play again or B to quit.");
+            Functions.Command("Thanks for playing. Type A to play again or B to quit.");
             string input = "";
             input = input.ToUpper();
             input = ReadLine();
