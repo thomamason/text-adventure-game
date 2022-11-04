@@ -1,30 +1,31 @@
 using System;
 using static System.Console;
 
-namespace Adventure {
-	public class Functions {
-        static void Narrator(string text)
+namespace MainGame
+{
+    public class Functions
+    {
+        public static void Narrator(string text)
         {
             ForegroundColor = ConsoleColor.Yellow;
             BackgroundColor = ConsoleColor.Blue;
             WriteLine(text);
             ResetColor();
-            ReadKey();
         }
-        static void Npc(string name, string text)
+        public static void Npc(string name, string text)
         {
             ForegroundColor = ConsoleColor.Yellow;
             WriteLine(name + ": \"" + text + "\"");
             ResetColor();
             ReadKey();
         }
-        static void Command(string message)
+        public static void Command(string message)
         {
             ForegroundColor = ConsoleColor.White;
             WriteLine(message);
             ResetColor();
         }
-        static void Text(string message)
+        public static void Text(string message)
         {
             ForegroundColor = ConsoleColor.Red;
             WriteLine(message);

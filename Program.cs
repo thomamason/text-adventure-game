@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace Adventure
+namespace MainGame
 {
     class Game
     {
@@ -112,7 +112,7 @@ namespace Adventure
             if (input == "B")
             {
                 Functions.Text("\"Fuck it.\" you think. You drink the shot. And black out.");
-                Functions.Functions.Command("You got the \'British Bulldog\' Trait (+1 to Con Saves Vs. Solvents)");
+                Functions.Command("You got the \'British Bulldog\' Trait (+1 to Con Saves Vs. Solvents)");
                 Trait.Aficionado = true;
                 ReadKey();
                 DrankPoppers();
