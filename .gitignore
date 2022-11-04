@@ -52,3 +52,8 @@ obj/Release/netcoreapp3.1/text-adventure.AssemblyInfo.cs
 obj/Release/netcoreapp3.1/text-adventure.AssemblyInfoInputs.cache
 obj/Release/netcoreapp3.1/text-adventure.GeneratedMSBuildEditorConfig.editorconfig
 obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+obj/Release/netcoreapp3.1/text-adventure.assets.cache
+obj/Release/netcoreapp3.1/text-adventure.csproj.AssemblyReference.cache
+obj/Release/netcoreapp3.1/text-adventure.csproj.CoreCompileInputs.cache
+obj/Release/netcoreapp3.1/text-adventure.genruntimeconfig.cache
+obj/Release/netcoreapp3.1/text-adventure.csproj.FileListAbsolute.txt
